@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+
+  kerasJupyter:
+    devices:
+      - "$(ls /dev/nvidia* | xargs -I{} echo '{}'):$(ls /dev/nvidia* | xargs -I{} echo '{}')"
+    volumes:
+      - "/Users/Compiaffe/Development/fishy:/srv"
+
+
