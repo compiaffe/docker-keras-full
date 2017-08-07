@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+
+  kerasJupyter:
+    build: ./.
+    image: keras-tf-jupyter:2.0.6-py3-tf-cpu
+    ports: 
+      - "8888:8888"
+      - "6006:6006"
+    networks: 
+     - keras
+    volumes:
+      - "/Users/Compiaffe/Development/fishy:/srv"
+
+
+networks:
+  keras:
+    driver: bridge
